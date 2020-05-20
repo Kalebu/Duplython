@@ -37,9 +37,10 @@ class Duplython:
             All_Files =[file for file in os.listdir() if os.path.isfile(file)]
             for file in All_Files:
                 filehash = self.generate_hash(file)
-                if not filehash in self.File_hashes:
-                    self.File_hashes.append(filehash)
-                    #print(file)
+                if filehash:
+                    if not filehash in self.File_hashes:
+                        self.File_hashes.append(filehash)
+                        #print(file)
                 else:
                     byte_saved = os.path.getsize(file); self.count_cleaned+=1
                     self.Total_bytes_saved+=byte_saved
