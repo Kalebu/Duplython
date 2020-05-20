@@ -37,8 +37,8 @@ class Duplython:
             All_Files =[file for file in os.listdir() if os.path.isfile(file)]
             for file in All_Files:
                 filehash = self.generate_hash(file)
-                if filehash:
-                    if not filehash in self.File_hashes:
+                if not filehash in self.File_hashes:
+                    if filehash:                       
                         self.File_hashes.append(filehash)
                         #print(file)
                 else:
