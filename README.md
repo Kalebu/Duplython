@@ -1,4 +1,4 @@
-# Desktop-File-cleaner
+# Duplython
 
 What is Duplython ?
 -------------------
